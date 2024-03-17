@@ -21,6 +21,7 @@ body {
 .dark-mode .container {
     background-color: rgb(40, 40, 58);
     color: white;
+    box-shadow: 0 4px 6px rgb(255, 255, 255);
 }
 
 .container {
