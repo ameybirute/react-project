@@ -3,7 +3,7 @@ import './App.css'; // Import the CSS file
 
 const App = () => {
     const [isLogin, setIsLogin] = useState(true); // Define isLogin state variable
-    const [isLightMode, setIsLightMode] = useState(false); // Define isLightMode state variable
+    const [isLightMode, setIsLightMode] = useState(true); // Define isLightMode state variable
 
     const toggleForm = () => {
         setIsLogin(!isLogin);
