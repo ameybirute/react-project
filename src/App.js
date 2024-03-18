@@ -25,9 +25,9 @@ const App = () => {
     const [selected, setSelected] = useState(false);
     
     return (
-
-        <div className={`app ${isLightMode ? 'light-mode' : 'dark-mode'}`}>
-             <div className="toggle-container" onClick={toggleLightMode}>
+<>
+                 <div className={`app ${isLightMode ? 'light-mode' : 'dark-mode'}`}>
+        <div className="toggle-container" onClick={toggleLightMode}>
         <div className={`dialog-button ${selected ? "" : "disabled"}`}>
           {selected ? "🌙" : "☀️"}
         </div>
@@ -52,6 +52,7 @@ const App = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 
 };
