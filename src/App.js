@@ -20,7 +20,7 @@ const App = () => {
     };
 
     return (
-        <div className={`app ${isLightMode ? 'light-mode' : ''}`}>
+        <div className={`app ${isLightMode ? 'light-mode' : 'dark-mode'}`}>
             <button className="light-mode-button" onClick={toggleLightMode}>
                 {isLightMode ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
             </button>
