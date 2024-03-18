@@ -22,7 +22,7 @@ const App = () => {
     };
 
 
-    const [selected, setSelected] = useState(true);
+    const [selected, setSelected] = useState(false);
     
     return (
 
@@ -53,10 +53,7 @@ const App = () => {
             </div>
         </div>
     );
-    ToggleButton.propTypes = {
-        selected: PropTypes.bool.isRequired,
-        toggleSelected: PropTypes.func.isRequired
-      };
+
 };
 
 export default App;
