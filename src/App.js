@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import './App.css'; // Import the CSS file
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
 
     const toggleLightMode = () => {
         setIsLightMode(!isLightMode);
+        setSelected(!selected)
     };
 
     const handleSubmit = (event) => {
@@ -19,11 +21,18 @@ const App = () => {
         console.log('Form submitted');
     };
 
+
+    const [selected, setSelected] = useState(false);
+    
     return (
-        <div className={`app ${isLightMode ? 'light-mode' : 'dark-mode'}`}>
-            <button className="light-mode-button" onClick={toggleLightMode}>
-                {isLightMode ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
-            </button>
+<>
+                 <div className={`app ${isLightMode ? 'light-mode' : 'dark-mode'}`}>
+        <div className="toggle-container" onClick={toggleLightMode}>
+        <div className={`dialog-button ${selected ? "" : "disabled"}`}>
+          {selected ? "🌙" : "☀️"}
+        </div>
+      </div>
+
             <div className="container">
                 <h1>{isLogin ? 'Login' : 'Sign Up'}</h1>
                 <form style={{ display: 'grid', rowGap: '10px' }} onSubmit={handleSubmit}>
@@ -43,7 +52,9 @@ const App = () => {
                 </div>
             </div>
         </div>
+        </>
     );
+
 };
 
 export default App;
